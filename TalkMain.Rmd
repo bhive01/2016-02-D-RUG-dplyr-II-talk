@@ -1,15 +1,42 @@
 ---
-title: "dplyr II: Joins and some other stuff"
+title: "dplyr II: Joins and stuff"
 author: "Brandon Hurr"
 date: "February 2, 2016"
 output: ioslides_presentation
 ---
 
-## R Markdown
+## dplyr
 
 This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+
+## Single table verbs
+
+`dplyr` implements the following verbs useful for data manipulation:
+
+* `select()`: focus on a subset of variables
+* `filter()`: focus on a subset of rows
+* `mutate()`: add new columns
+* `summarise()`: reduce each group to a smaller number of summary statistics
+* `arrange()`: re-order the rows
+
+## Multiple table verbs
+
+As well as verbs that work on a single tbl, there are also a set of useful verbs that work with two tbls at a time: joins and set operations.
+
+dplyr implements the four most useful joins from SQL:
+
+* `inner_join(x, y)`: matching x + y
+* `left_join(x, y)`: all x + matching y
+* `semi_join(x, y)`: all x with match in y
+* `anti_join(x, y)`: all x without match in y
+
+And provides methods for:
+
+* `intersect(x, y)`: all rows in both x and y
+* `union(x, y)`: rows in either x or y
+* `setdiff(x, y)`: rows in x, but not y
 
 ## Slide with Bullets
 
