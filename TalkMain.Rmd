@@ -5,11 +5,27 @@ date: "February 2, 2016"
 output: ioslides_presentation
 ---
 
+## Previous dplyr Presentation
+Michael Levy gave a presentation to D-RUG Oct. 2014
+http://michaellevy.name/blog/dplyr-data-manipulation-in-r-made-easy/
+
+## Hadleyverse
+<div class="columns-2">
+  ![Image](hadleyversecropped.png)
+
+A collection of tools to:
+  - Ingest
+  - Manipulate
+  - Visualize
+  - Create packages
+  - Simplify programming
+  - + data packages
+</div>
+
 ## dplyr
 
-This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+dplyr provides a set of tools to assemble, transform and summarize your data. 
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
 
 ## Single table verbs
 
