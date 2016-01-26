@@ -2,7 +2,9 @@
 title: "dplyr II: Joins and stuff"
 author: "Brandon Hurr"
 date: "February 2, 2016"
-output: ioslides_presentation
+output: 
+  ioslides_presentation
+
 ---
 
 ## Previous dplyr Presentation
@@ -19,7 +21,7 @@ rds <- readRDS(file="packages.rds")
 data <- as.data.frame(rds, stringsAsFactors = FALSE)
 ```
 
-```{r igraphplot, echo=FALSE, message = FALSE, error=FALSE, warning=FALSE, cache= FALSE, fig.width=9, fig.height=6, dpi=90}
+```{r igraphplot, echo=FALSE, message = FALSE, error=FALSE, warning=FALSE, cache= FALSE, out.width=600, out.height=400}
 library(lazyeval)
 library(dplyr)
 library(igraph)
@@ -91,6 +93,9 @@ layout <- layout.random(g)
 par(mar=c(0,0,0,0)+.1)
 plot(g, margin=-0.1, layout=layout)
 ```
+
+code shamelessly borrowed from : http://adolfoalvarez.cl/the-hitchhikers-guide-to-the-hadleyverse/
+
 
 ## Hadleyverse
 
