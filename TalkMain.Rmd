@@ -21,7 +21,7 @@ rds <- readRDS(file="packages.rds")
 data <- as.data.frame(rds, stringsAsFactors = FALSE)
 ```
 
-```{r igraphplot, echo=FALSE, message = FALSE, error=FALSE, warning=FALSE, cache= FALSE, out.width=600, out.height=400}
+```{r igraphplot, echo=FALSE, message = FALSE, error=FALSE, warning=FALSE, cache= FALSE, out.width=700, out.height=400}
 library(lazyeval)
 library(dplyr)
 library(igraph)
@@ -91,7 +91,7 @@ V(g)$size <- degree(g, mode = "in", loops = F) #Size proportional to degree
 layout <- layout.random(g)
 
 par(mar=c(0,0,0,0)+.1)
-plot(g, margin=-0.1, layout=layout)
+plot(g, margin=-0.1, layout=layout, asp=0)
 ```
 
 code shamelessly borrowed from : http://adolfoalvarez.cl/the-hitchhikers-guide-to-the-hadleyverse/
@@ -99,7 +99,7 @@ code shamelessly borrowed from : http://adolfoalvarez.cl/the-hitchhikers-guide-t
 
 ## Hadleyverse
 
-  - Ingest (rvest, xml2)
+  - Ingest (rvest, readr, readxl)
   - Manipulate (**dplyr**)
   - Visualize (ggplot2, ggvis)
   - Create packages (devtools, testthat)
