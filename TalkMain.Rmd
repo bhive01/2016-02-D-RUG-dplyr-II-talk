@@ -103,7 +103,7 @@ plot(g, margin=-0.1, layout=layout, asp=0)
 
 ## dplyr
 
-dplyr provides a set of tools to assemble, transform and summarize your data. 
+dplyr provides a set of tools to assemble, transform, and summarize your data. 
 
 
 ## Previous dplyr Presentation
@@ -121,28 +121,25 @@ http://michaellevy.name/blog/dplyr-data-manipulation-in-r-made-easy/
 * `arrange()`: re-order the rows
 
 
-## Multiple table verbs
+## Multiple table verbs (Joins)
 
 As well as verbs that work on a single tbl, there are also a set of useful verbs that work with two tbls at a time: joins and set operations.
 
-dplyr implements the four most useful joins from SQL:
+* Joins
+    + `inner_join(x, y)`: matching x + y
+    + `left_join(x, y)`: all x + matching y
+    + `semi_join(x, y)`: all x with match in y
+    + `anti_join(x, y)`: all x without match in y
+* Sets
+    + `intersect(x, y)`: all rows in both x and y
+    + `union(x, y)`: rows in either x or y
+    + `setdiff(x, y)`: rows in x, but not y
 
-* `inner_join(x, y)`: matching x + y
-* `left_join(x, y)`: all x + matching y
-* `semi_join(x, y)`: all x with match in y
-* `anti_join(x, y)`: all x without match in y
+## Why Joins?
 
-And provides methods for:
+The reality of data.
 
-* `intersect(x, y)`: all rows in both x and y
-* `union(x, y)`: rows in either x or y
-* `setdiff(x, y)`: rows in x, but not y
-
-## Slide with Bullets
-
-- Bullet 1
-- Bullet 2
-- Bullet 3
+![image](http://r4ds.had.co.nz/diagrams/relational-nycflights.png)
 
 ## Slide with R Code and Output
 
