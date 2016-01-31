@@ -253,6 +253,13 @@ All rows from x that have no key match in y.
 anti_join(x, y, by = "key")
 ```
 
+## Want everything that doesn't match?
+Combine join statements.
+
+```{r combinejoins}
+full_join(anti_join(x,y, by = "key"), anti_join(y,x, by = "key"), by= "key")
+```
+
 ## Different keys?
 
 Real data is messy. If key1 is "date" and key2 is "Date" things break. So, specify:

@@ -6,16 +6,30 @@ y <- data.frame(key= LETTERS[c(1:4)], value2 = sample(1:10, 4), stringsAsFactors
 x
 y
 
-# "Joining" joins
+## "Joining" joins
+
+# What's in both x and y?
 inner_join(x, y, by = "key")
+
+# What's in X and bring with it the stuff that matches in Y
 left_join(x, y, by = "key")
+
+# What's in Y and bring with it the stuff that matches in Y
 right_join(x, y, by = "key")
+
+# Give me everything!
 full_join(x, y, by = "key")
 
-# filtering "joins"
+## filtering "joins"
+
+# Give me the stuff in X that is also in Y
 semi_join(x, y, by = "key")
+
+# Give me the stuff in X that is not in Y
 anti_join(x, y, by = "key")
 
+# Want everything that doesn't match?
+full_join(anti_join(x,y, by = "key"), anti_join(y,x, by = "key"), by= "key")
 
 # keys with different names?
 x <- data.frame(keyX= LETTERS[c(1:3, 5)], value1 = sample(1:10, 4), stringsAsFactors = FALSE)
