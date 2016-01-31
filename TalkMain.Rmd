@@ -1,5 +1,5 @@
 ---
-title: "dplyr II: Joins and stuff"
+title: "dplyr II: Joins and Set Ops"
 author: "Brandon Hurr"
 date: "February 2, 2016"
 output: 
